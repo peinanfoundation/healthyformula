@@ -1,0 +1,49 @@
+.ss-page {
+  padding-top: var(--nav-h);
+  color: var(--ss-ink);
+  background:
+    radial-gradient(900px 480px at 8% -8%, rgba(61, 154, 223, 0.16), transparent 58%),
+    radial-gradient(800px 420px at 100% 8%, rgba(26, 111, 181, 0.1), transparent 55%),
+    linear-gradient(180deg, var(--ss-mist) 0%, #f7fafc 48%, var(--white) 100%);
+}
+
+.ss-page__main {
+  padding-top: 2rem;
+}
+
+.ss-page__crumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  color: var(--ss-soft);
+  margin-bottom: 1.4rem;
+}
+
+.ss-page__crumb a {
+  color: var(--ss-mid);
+  font-weight: 600;
+}
+
+.ss-page__crumb a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.services__list h2 {
+  font-size: 1.15rem;
+  color: var(--ss-deep);
+  margin-bottom: 0.35rem;
+}
+
+.ss-page__intro {
+  display: grid;
+  gap: 1rem;
+  max-width: none;
+}
+
+.ss-page__intro p {
+  color: var(--ss-soft);
+  font-size: 0.98rem;
+  line-height: 1.75;
+}

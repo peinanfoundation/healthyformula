@@ -1,0 +1,230 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  color: var(--ss-ink);
+  padding: calc(var(--nav-h) + 1.6rem) 0 2.2rem;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 85% 20%, rgba(61, 154, 223, 0.24), transparent 55%),
+    radial-gradient(ellipse 55% 50% at 10% 80%, rgba(26, 111, 181, 0.16), transparent 50%),
+    linear-gradient(165deg, #f2f7fc 0%, #e6f0f8 45%, #d9eaf6 100%);
+}
+
+.hero__glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(48px);
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.hero__glow--a {
+  width: min(420px, 50vw);
+  height: min(420px, 50vw);
+  right: -4%;
+  top: -8%;
+  background: rgba(61, 154, 223, 0.32);
+  animation: drift 12s ease-in-out infinite alternate;
+}
+
+.hero__glow--b {
+  width: min(320px, 40vw);
+  height: min(320px, 40vw);
+  left: -6%;
+  bottom: -10%;
+  background: rgba(11, 61, 110, 0.2);
+  animation: drift 10s ease-in-out infinite alternate-reverse;
+}
+
+.hero__layout {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(1.4rem, 3vw, 2.4rem);
+  align-items: stretch;
+}
+
+.hero__copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.4rem 0;
+}
+
+.hero__brand {
+  width: min(340px, 88%);
+  height: auto;
+  margin-bottom: 1.1rem;
+}
+
+.hero__brand--ss {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.hero__title {
+  font-size: clamp(1.75rem, 3.4vw, 2.55rem);
+  color: var(--ss-deep);
+  margin-bottom: 0.75rem;
+}
+
+.hero__lead {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--ss-soft);
+  margin-bottom: 1.25rem;
+  max-width: 34rem;
+}
+
+.hero .btn-primary {
+  background: var(--ss-deep);
+}
+
+.hero .btn-primary:hover {
+  background: var(--ss-mid);
+}
+
+.hero .btn-outline {
+  border-color: var(--ss-mid);
+  color: var(--ss-deep);
+}
+
+.hero .btn-outline:hover {
+  background: var(--ss-foam);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.hero__feature {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--ss-line);
+  border-radius: 0.55rem;
+  padding: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 12px 32px rgba(11, 61, 110, 0.1);
+}
+
+.hero__feature-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.hero__feature-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ss-mid);
+}
+
+.hero__feature-logo {
+  height: 2.35rem;
+  width: auto;
+  background: #fff;
+  border-radius: 0.25rem;
+}
+
+.hero__feature-stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 0.4rem;
+  background: var(--ss-foam);
+}
+
+.hero__feature-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.hero__feature-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.hero__feature-foot p {
+  font-size: 0.88rem;
+  color: var(--ss-soft);
+}
+
+.hero__feature-dots {
+  display: flex;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+
+.hero__feature-dots button {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 1px;
+  background: rgba(11, 61, 110, 0.22);
+  transition: width 0.3s var(--ease), background 0.3s var(--ease);
+}
+
+.hero__feature-dots button.is-active {
+  width: 1.15rem;
+  background: var(--ss-mid);
+}
+
+.hero__feature-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ss-deep);
+  padding-top: 0.15rem;
+  border-top: 1px solid var(--ss-line);
+}
+
+.hero__feature-link:hover {
+  color: var(--ss-mid);
+}
+
+@keyframes drift {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-14px, 18px);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    padding: calc(var(--nav-h) + 1.1rem) 0 1.6rem;
+  }
+
+  .hero__layout {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .hero__brand {
+    width: min(300px, 92%);
+  }
+
+  .hero__feature-stage {
+    aspect-ratio: 4 / 3;
+  }
+}
