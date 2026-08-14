@@ -89,6 +89,12 @@ p {
   margin-inline: auto;
 }
 
+@media (min-width: 1200px) {
+  .container {
+    width: min(1240px, calc(100% - 3.5rem));
+  }
+}
+
 .section {
   padding: clamp(4rem, 8vw, 6.5rem) 0;
 }
