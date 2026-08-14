@@ -50,6 +50,19 @@
   display: block;
 }
 
+@media (min-width: 901px) {
+  .featured-event__grid {
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 300px);
+    gap: 2.4rem;
+    align-items: start;
+  }
+
+  .featured-event__poster {
+    max-width: 300px;
+    justify-self: end;
+  }
+}
+
 @media (max-width: 900px) {
   .featured-event__grid {
     grid-template-columns: 1fr;

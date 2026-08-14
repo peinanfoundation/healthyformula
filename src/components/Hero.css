@@ -210,6 +210,32 @@
   }
 }
 
+@media (min-width: 901px) {
+  .hero {
+    padding: calc(var(--nav-h) + 2rem) 0 2.6rem;
+  }
+
+  .hero__layout {
+    grid-template-columns: minmax(22rem, 36rem) minmax(20rem, 26rem);
+    justify-content: center;
+    gap: 2.25rem;
+    align-items: center;
+  }
+
+  .hero__title {
+    font-size: clamp(1.65rem, 2vw, 2.1rem);
+  }
+
+  .hero__feature {
+    width: 100%;
+    max-width: 26rem;
+  }
+
+  .hero__feature-stage {
+    aspect-ratio: 4 / 3;
+  }
+}
+
 @media (max-width: 900px) {
   .hero {
     padding: calc(var(--nav-h) + 1.1rem) 0 1.6rem;
