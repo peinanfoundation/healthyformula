@@ -81,6 +81,11 @@
   border-radius: 0.4rem;
 }
 
+.research__more {
+  margin-top: 1.25rem;
+}
+
+.research__goals h2,
 .research__goals h3 {
   font-size: 1.15rem;
   color: var(--brand-deep);
@@ -117,6 +122,7 @@
   margin-bottom: 0.45rem;
 }
 
+.research__card h2,
 .research__card h3 {
   font-size: 1.25rem;
   color: var(--brand-deep);

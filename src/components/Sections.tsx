@@ -72,17 +72,33 @@ export function FeaturedEvent() {
   );
 }
 
-export function Research() {
+export function ResearchTeaser() {
   return (
     <section className="section research" id="research">
       <div className="container">
         <motion.div {...fade}>
           <h2 className="section-title">研究項目</h2>
           <p className="section-lead">{researchIntro.text}</p>
+          <Link className="btn btn-primary research__more" to="/research">
+            查看研究項目
+          </Link>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+export function Research() {
+  return (
+    <section className="section research" id="research">
+      <div className="container">
+        <motion.div {...fade}>
+          <h1 className="section-title">研究項目</h1>
+          <p className="section-lead">{researchIntro.text}</p>
         </motion.div>
 
         <div className="research__goals">
-          <h3>研究工作的核心目的</h3>
+          <h2>研究工作的核心目的</h2>
           <ul>
             {researchIntro.goals.map((g) => (
               <li key={g}>{g}</li>
@@ -100,7 +116,7 @@ export function Research() {
               transition={{ ...fade.transition, delay: 0.06 * i }}
             >
               <span className="research__year">{p.year}</span>
-              <h3>{p.title}</h3>
+              <h2>{p.title}</h2>
               <p>{p.summary}</p>
               {p.details && (
                 <ul className="research__details">

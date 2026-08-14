@@ -1,5 +1,5 @@
 import { Hero } from "../components/Hero";
-import { About, FeaturedEvent, OurWork, Research } from "../components/Sections";
+import { About, FeaturedEvent, OurWork, ResearchTeaser } from "../components/Sections";
 import { Mission } from "../components/MoreSections";
 
 export function HomePage() {
@@ -10,7 +10,7 @@ export function HomePage() {
       <Mission />
       <OurWork />
       <FeaturedEvent />
-      <Research />
+      <ResearchTeaser />
     </>
   );
 }

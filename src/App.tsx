@@ -4,6 +4,7 @@ import { Footer } from "./components/MoreSections";
 import { EventsPage } from "./pages/EventsPage";
 import { HomePage } from "./pages/HomePage";
 import { JoinPage } from "./pages/JoinPage";
+import { ResearchPage } from "./pages/ResearchPage";
 import { SumShuiPage } from "./pages/SumShuiPage";
 import "./components/Sections.css";
 
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/events" element={<EventsPage />} />
           <Route path="/join" element={<JoinPage />} />
+          <Route path="/research" element={<ResearchPage />} />
           <Route path="/sumshuibong" element={<SumShuiPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

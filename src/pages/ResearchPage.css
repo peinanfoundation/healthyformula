@@ -1,0 +1,29 @@
+.research-page {
+  padding-top: 5.5rem;
+  min-height: 60vh;
+}
+
+.research-page__crumb-wrap {
+  padding-top: 2rem;
+}
+
+.research-page__crumb {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.88rem;
+  color: var(--brand-soft);
+}
+
+.research-page__crumb a {
+  color: var(--brand-mid);
+  text-decoration: none;
+}
+
+.research-page__crumb a:hover {
+  color: var(--brand-deep);
+}
+
+.research-page .research {
+  padding-top: 1.2rem;
+}
