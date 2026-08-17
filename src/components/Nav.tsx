@@ -4,8 +4,6 @@ import "./Nav.css";
 
 const homeLinks = [
   { href: "/#about", label: "機構簡介" },
-  { href: "/#mission", label: "使命與信念" },
-  { href: "/#work", label: "我們的工作" },
   { href: "/research", label: "研究項目" },
   { href: "/events", label: "活動" },
   { href: "/join", label: "加入我們" },
