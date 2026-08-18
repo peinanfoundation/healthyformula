@@ -84,7 +84,7 @@ export function Nav() {
                 location.pathname === "/sumshuibong" ? "nav__active" : undefined
               }
             >
-              項目：滲水幫
+              重點項目：滲水幫
             </Link>
             <a className="nav__cta" href="mailto:healthyformula.hk@gmail.com">
               聯絡我們
@@ -118,7 +118,7 @@ export function Nav() {
           }
           onClick={close}
         >
-          項目：滲水幫
+          重點項目：滲水幫
         </Link>
         <a
           className="nav__cta"
